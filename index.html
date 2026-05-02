@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<title>Art by ####### | Home</title>
+  	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+  	<link id="theme-style" href="/css/rainbowsandsparkles.css" rel="stylesheet">
+  	<script type="text/javascript" src="main.js"></script>
+  	<meta name="referrer" content="origin"/>
+  	<style>@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');</style>
+  </head>
+  <body>
+  	<!-- JS -->
+  	<div>
+  		<!-- Warning -->
+  		<script>
+  			document.addEventListener("DOMContentLoaded", function(){
+  			  	const warning = document.getElementById("ageWarning");
+  			  	const enterBtn = document.getElementById("enterBtn");
+  			  	const leaveBtn = document.getElementById("leaveBtn");
+  
+  			  	// Show warning ONLY if user hasn't verified
+  			  	if(!localStorage.getItem("ageVerified")){
+  			      	warning.style.display = "flex"; // show it
+  			  	}
+  
+  			  	enterBtn.addEventListener("click", function(){
+  			      	localStorage.setItem("ageVerified", "true");
+  			      	warning.style.display = "none";
+  			  	});
+  
+  			 	leaveBtn.addEventListener("click", function(){
+  			      	window.location.href = "https://google.com";
+  			  	});
+  			});
+  		</script>
+  		<div id="ageWarning">
+  	  		<img src="https://files.catbox.moe/tzvzte.jpg" id="warningImg">
+  	  		<img src="https://files.catbox.moe/1ryls3.png" id="enterBtn">
+  	  		<img src="https://files.catbox.moe/1ryls3.png" id="leaveBtn">
+  		</div>
+  		<!-- Support -->
+  		<script>
+  			document.addEventListener("DOMContentLoaded", () => {
+  			  	const popup = document.getElementById("support-popup");
+  			  	const openBtn = document.querySelector(".open-support");
+  
+  			  	// Open popup
+  			  	openBtn.addEventListener("click", (e) => {
+  			    	e.preventDefault(); // prevent jump
+  			    	popup.classList.remove("hidden-support");
+  			  	});
+  
+  			  	// Close popup when clicking outside content
+  			  	popup.addEventListener("click", (e) => {
+  			    	if (e.target === popup) { // only if you click on overlay
+  			      	popup.classList.add("hidden-support");
+  			    	}
+  			  	});
+  			});
+  		</script>
+  	</div>
+  	<!-- Header -->
+  	<img class="above-header" src="/images/assets/aboveheader.png">
+  	<div class="header">
+  		<img draggable="false" class="logo" src="/images/assets/logo.png">
+  		<img id="currentBanner" src="">
+  		<script>
+  			var banners = [
+  			"/images/assets/banner1.png",
+  			];
+  
+  		 	var index = Math.floor(Math.random() * banners.length);
+  		 	document.getElementById("currentBanner").src = banners[index];
+  		</script>
+  	</div>
+  	<img class="under-header" src="/images/assets/underheader.png">
+  	<!-- Container -->
+  	<div class="container">
+  		<!-- Navigation + updates -->
+  		<div class="left">
+  			<nav class="navigation">
+  				<a href="/">
+  					<img src="/images/assets/home.png">
+  				</a>
+  				<a href="/gallery/">
+  					<img src="/images/assets/gallery.png">
+  				</a>
+  				<a href="/comics/">
+  					<img src="/images/assets/comics.png">
+  				</a>
+  				<a href="/blog/">
+  					<img src="/images/assets/blog.png">
+  				</a>
+  				<a href="/wiki/">
+  					<img src="/images/assets/wiki.png">
+  				</a>
+  				<a href="/guests/">
+  					<img src="/images/assets/guests.png">
+  				</a>
+  				<a class="open-support" href="#">
+  					<img src="/images/assets/support.png">
+  				</a>
+  				<a class="switch-theme" href="#">
+  					<img src="/images/assets/darkmode.png">
+  				</a>
+  			</nav>
+  			<img class="topper" src="/images/assets/topper.png">
+  			<div class="updates" id="updates-container"></div>
+  		</div>
+  		<!-- Body -->
+  		<div class="body">
+  			<img style="max-width: 100%; height: auto" src="/images/assets/border.png">
+  			<!-- Latest art -->
+  			<div>
+  				<div class="section-info">
+  					<img class="section-bg" src="/images/assets/sectioninfo.png">
+  					<div class="text-wrapper">
+  						<span>Latest art</span>
+  						<a href="#">See more...</a>
+  					</div>
+  				</div>
+  				<div class="recent-art-sec">
+  					<nav class="recent-art">
+  						<ul>
+  							<li>
+  								<a class="thumbnail" href="/testart1/">
+  									<img src="https://files.catbox.moe/1uqkan.png">
+  								</a>
+  							</li>
+  							<li>
+  								<a class="thumbnail" href="/testart1/">
+  									<img src="https://files.catbox.moe/zz80si.png">
+  								</a>
+  							</li>
+  							<li>
+  								<a class="thumbnail" href="/testart1/">
+  									<img src="https://files.catbox.moe/64tmy7.png">
+  								</a>
+  							</li>
+  						</ul>
+  					</nav>
+  				</div>
+  			</div>
+  			<img style="max-width: 100%; height: auto" src="/images/assets/border.png">
+  			<!-- Latest blogs + comics-->
+  			<div>
+  				<div class="section-info">
+  					<img class="section-bg" src="/images/assets/sectioninfo.png">
+  					<div class="text-wrapper">
+  						<span>Blog and Comic Updates</span>
+  						<a href="#">See more...</a>
+  					</div>
+  				</div>
+  				<div class="recent-blogs-sec">
+  				    <div class="blogs-grid">
+  					      <!-- Left side -->
+  					      <div class="blogs-column">
+  					        <div class="blog-entry">
+  					          <div class="blog-thumb">
+  					          	<a href="#">
+  					            	<img src="https://files.catbox.moe/1uqkan.png" alt="">
+  					            </a>
+  					          </div>
+  					          <div class="blog-text">
+  					            <a href="/testblog/">Amazing Blog Title #1</a>
+  					            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...Lorem ipsum dolor sit amet, consectetur adipiscing elit...Lorem ipsum dolor sit amet, consectetur adipiscing elit...Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+  					          </div>
+  					        </div>
+  					        <div class="blog-entry">
+  					          <div class="blog-thumb">
+  					            <a href="#">
+  					            	<img src="https://files.catbox.moe/1uqkan.png" alt="">
+  					            </a>
+  					          </div>
+  					          <div class="blog-text">
+  					            <a href="/testblog/">Amazing Blog Title #2</a>
+  					            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...Lorem ipsum dolor sit amet, consectetur adipiscing elit...Lorem ipsum dolor sit amet, consectetur adipiscing elit...Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+  					          </div>
+  					        </div>
+  					        <div class="blog-entry">
+  					          <div class="blog-thumb">
+  					            <a href="#">
+  					            	<img src="https://files.catbox.moe/1uqkan.png" alt="">
+  					            </a>
+  					          </div>
+  					          <div class="blog-text">
+  					            <a href="/testblog/">Amazing Blog Title #3</a>
+  					            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...Lorem ipsum dolor sit amet, consectetur adipiscing elit...Lorem ipsum dolor sit amet, consectetur adipiscing elit...Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+  					          </div>
+  					        </div>
+  					      </div>
+  					      <!-- Right side -->
+  					      <div class="blogs-column">
+  					        <div class="blog-entry">
+  					          <div class="blog-thumb">
+  					            <a href="#">
+  					            	<img src="https://files.catbox.moe/1uqkan.png" alt="">
+  					            </a>
+  					          </div>
+  					          <div class="blog-text">
+  					            <a href="/testblog/">Amazing Blog Title #4</a>
+  					            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...Lorem ipsum dolor sit amet, consectetur adipiscing elit...Lorem ipsum dolor sit amet, consectetur adipiscing elit...Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+  					          </div>
+  					        </div>
+  					        <div class="blog-entry">
+  					          <div class="blog-thumb">
+  					            <a href="#">
+  					            	<img src="https://files.catbox.moe/1uqkan.png" alt="">
+  					            </a>
+  					          </div>
+  					          <div class="blog-text">
+  					            <a href="/testblog/">Amazing Blog Title #5</a>
+  					            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...Lorem ipsum dolor sit amet, consectetur adipiscing elit...Lorem ipsum dolor sit amet, consectetur adipiscing elit...Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+  					          </div>
+  					        </div>
+  					        <div class="blog-entry">
+  					        </div>
+  					      </div>
+  					    </div>
+  			  		</div>
+  			  	</div>
+  			<img style="max-width: 100%; height: auto" src="/images/assets/border.png">
+  			<div style="text-align: center;">
+  				<img style="margin-top: 4px; max-width: 25px;" src="/images/assets/happy.png">
+  			</div>
+  		</div>
+  		<!-- Side Banner -->
+  		<div class="side">
+  			<img id="currentSideBanner" src="">
+  			<script>
+  			var sideBanners = [
+  			"https://files.catbox.moe/1nqejq.png",
+  			"https://files.catbox.moe/1nqejq.png",
+  			"https://files.catbox.moe/1nqejq.png",
+  			];
+  
+  		 	var index = Math.floor(Math.random() * banners.length);
+  		 	document.getElementById("currentSideBanner").src = sideBanners[index];
+  			</script>
+  		</div>
+  	</div>
+  	<!-- Support -->
+  	<div id="support-popup" class="hidden-support">
+  		<div class="support-popup-content">
+  			<h2>Support & Contact</h2>
+  			<p>If you would like to donate to support me, check out my ko-fi below!<br><br>Experiencing issues? Please let me know by mail or through comments; I read all of them!<br><br>Thank you for enjoying my site!</p>
+  			<button>Email</button>
+  			<button>Ko-fi</button>
+  		</div>
+  	</div>
+  </body>
+</html>
