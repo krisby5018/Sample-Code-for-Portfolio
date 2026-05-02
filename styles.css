@@ -1,0 +1,455 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html{
+	scrollbar-width: thin;
+	scrollbar-color: white royalblue;
+	background: url("/images/assets/clouds.jpg") center / cover no-repeat;
+	background-attachment: fixed;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+/*WARNING*/
+#ageWarning {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  display: none; /* hide by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+#warningImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#warningButtons {
+  position: absolute;
+  bottom: 8%;
+  display: flex;
+  gap: 40px;
+}
+
+#enterBtn, #leaveBtn {
+  width: 260px;
+  cursor: pointer;
+  /*transition:transform 0.15s;*/
+}
+
+#enterBtn:hover, #leaveBtn:hover {
+  /*transform:scale(1.05);*/
+}
+
+/*HOME*/
+body {
+	background-image: linear-gradient(to top, rgba(0, 0, 255, 0.55), rgba(135, 206, 250, 0.7), rgba(173, 216, 230, 0.8), rgba(0, 0, 255, 0.9), rgba(135, 206, 250, 1.0));
+	padding-bottom: 100px;
+	position: relative;
+	z-index: 1000;
+}
+
+.header {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.above-header {
+	max-width: 100%;
+}
+
+.under-header {
+	display: flex;
+  max-width: 100%;
+  margin-top: 0.5%;
+}
+
+#currentBanner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+}
+
+.logo {
+	position: relative;
+	max-width: 25%;
+	height: auto;
+	z-index: 10;
+	filter: drop-shadow(5px 2px 2px rgba(128, 0, 128, 0.5));
+	transition: transform 0.45s ease;
+	margin-right: 2%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.logo:hover {
+  transform: translateY(-3px);
+}
+
+/*BODY*/
+.container {
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	width: calc(100vw - 50px);
+	margin-top: 0.5%;
+}
+
+/*NAVIGATION + UPDATES*/
+.left {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 11%;
+	height: fit-content;
+	margin-left: -10px;
+}
+
+.navigation {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.navigation a {
+  width: 100%;
+ 	margin-bottom: 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation a img {
+	width: 90%;
+	height: auto;
+	aspect-ratio: 3 / 1;
+	object-fit: contain;
+	transition: transform 0.1s ease;
+}
+
+.navigation a:hover img {
+	transform: scale(1.05);
+}
+
+.topper {
+  display: block;
+  max-width: 89%;
+  height: auto;
+  object-fit: cover;
+  margin: -10px auto 0 auto;
+  margin-top: 1.5vh;
+}
+
+.updates {
+	position: relative;
+  max-width: 75%;
+  aspect-ratio: 3 / 7;
+  display: block;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 0.15vw solid white;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+@supports not (aspect-ratio: 1/1) {
+  .updates {
+    height: 300px;
+  }
+}
+
+.entry p {
+	font-size: 0.8vw;
+  width: 100%;
+  text-align: center;
+  margin: 0 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 0.2em dotted white;
+}
+
+.u-date {
+	color: white;
+	font-size: 1.2vw;
+	font-weight: bold;
+	font-family: "Quicksand", sans-serif;
+}
+
+.u-text {
+	color: white;
+	font-size: 0.8vw;
+	font-family: verdana;
+}
+
+.u-text a {
+	color: white;
+}
+
+/*BODY*/
+.body {
+	display: flex;
+	flex-direction: column;
+	width: 75%;
+	height: 100%;
+}
+
+.section-info {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2860 / 70;
+  overflow: hidden;
+}
+
+.section-info img.section-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  display: block;
+}
+
+.section-info span {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  color: white;
+  white-space: nowrap;
+  font-size: 1.2vw; 
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+}
+
+.section-info a {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  color: white;
+  white-space: nowrap;
+  font-size: 0.8vw;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  padding: 1px 6px;
+  border-bottom: 2px white solid;
+  color: white;
+  background-color: hotpink;
+  text-decoration: none;
+}
+
+.section-info a:hover {
+	background-color: darkviolet;
+}
+
+.recent-art-sec {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 100%;
+	height: fit-content;
+	border-left: 0.15vw solid white;
+	border-right: 0.15vw solid white;
+	background-image: linear-gradient(to bottom, rgba(0, 98, 255, 0.30), rgba(0, 167, 255, 0.30), rgba(255, 255, 255, 0.30));
+	z-index: 0;
+}
+
+.recent-art{
+	display: flex;
+}
+
+.recent-art-sec ul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 10px;
+	margin: 2%;
+	padding: 0px;
+	list-style: none;
+}
+
+.thumbnail img{
+	display: block;
+	max-width: 100%;
+	height: 400px;
+	border-radius: 10px;
+	object-fit: cover;
+	transition: transform 0.2s ease;
+	border: 0.15em solid white;
+}
+
+.thumbnail:hover img{
+	transform: scale(1.02);
+}
+
+.recent-blogs-sec {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border-left: 0.15vw solid white;
+	border-right: 0.15vw solid white;
+}
+
+.blogs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  border-left: 1px solid rgba(255,255,255,0.3);
+}
+
+.blogs-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-entry {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  height: 140px;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: rgba(0, 98, 255, 0.30);
+  container-type: inline-size;
+}
+
+.blog-thumb {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.8em;
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 0;
+}
+
+.blog-thumb img {
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: cover;
+	transition: transform 0.2s ease;
+}
+
+.blog-thumb:hover img{
+	transform: scale(1.02);
+}
+
+.blog-text {
+  flex: 1;
+  max-height: 120px;
+  overflow: hidden;
+  position: relative;
+  padding-right: 0.5em;
+  color: white;
+}
+
+.blog-text a {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* limit title lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 0.2em;
+  font-family: "Quicksand", sans-serif;
+}
+
+.blog-text p {
+  font-size: 1em;
+  color: white;
+  margin: 0;
+  line-height: 1.4em;
+  font-family: verdana;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines you want */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/*SIDE BANNER*/
+.side {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 15%;
+    height: auto;
+    margin-left: 0.3%;
+}
+
+#currentSideBanner {
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+}
